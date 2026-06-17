@@ -140,7 +140,7 @@ export default function Packages({ onNavigate, prefillParams }: PackagesProps) {
       duration: '5 Nights / 6 Days',
       routes:[
         'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Alleppey Houseboat (1 Night).',
-        'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night)- Kumarakom (1 Night) - Alleppey Houseboat (1 Night).',
+        'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night)- Kumarakom Lake Resort (1 Night) - Alleppey Houseboat (1 Night).',
         'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Vagamon(1 Night)- Alleppey Houseboat (1 Night).',
       ],
       description: 'Experience the best of South Kerala. View the rolling tea gardens of Munnar, spot elephants in Periyar Lake, spice gardens in Thekkady, sail through Alleppey backwaters, and explore the historic Chinese Fishing nets in Fort Kochi.',
@@ -161,7 +161,7 @@ export default function Packages({ onNavigate, prefillParams }: PackagesProps) {
       duration: '6 Nights / 7 Days',
          routes:[
         'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Alleppey Houseboat (1 Night) - Kovalam Beach (2 Nights)',
-         'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Kumarakom(1 Night) - Alleppey Houseboat (1 Night).',
+         'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Kumarakom Lake Resort (1 Night) - Alleppey Houseboat (1 Night).',
          'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - vagamon (2 Nights) Alleppey Houseboat (1 Night).',
       ],
       description: 'The ultimate grand itinerary. Traverse all landscapes of Kerala: the green hills of Munnar, forest trails of Thekkady, lazy backwater lagoons of Alleppey, and the golden shores & seaside cafes of Kovalam Beach.',
@@ -182,7 +182,7 @@ export default function Packages({ onNavigate, prefillParams }: PackagesProps) {
   duration: '7 Nights / 8 Days',
   routes:[
     'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) -  Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
-     'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - kumarakom (1 Night) - Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
+     'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - kumarakom Lake Resort (1 Night) - Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
       'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Vagamon (1 Night) - Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
   ],
   description: 'Experience Kerala’s most scenic destinations in a single journey. Explore the mist-covered tea plantations and breathtaking viewpoints of Munnar, discover the wildlife and spice plantations of Thekkady, relax amidst the rolling meadows and pine forests of Vagamon, enjoy a memorable overnight cruise through the tranquil backwaters of Alleppey aboard a traditional houseboat, and unwind on the beautiful beaches of Kovalam.',
@@ -207,7 +207,7 @@ export default function Packages({ onNavigate, prefillParams }: PackagesProps) {
   title: 'Grand Kerala Explorer',
   duration: '8 Nights / 9 Days',
   routes:[ 'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Alleppey Houseboat (1  Night) - Kanyakumari (1 Night) - Kovalam (2 Nights).',
-    'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - kumarakom (1 Night) - Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
+    'Kochi (1 Night) - Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - kumarakom Lake Resort (1 Night) - Alleppey Houseboat (1 Night) - Kovalam (2 Nights).',
     'Munnar Hills (2 Nights) - Thekkady Wildlife (1 Night) - Vagamon (1 Night) - Alleppey Houseboat (1 Night) - Kanyakumari (1 Night) - Kovalam (2 Nights).',
   ],
   description: 'Discover the best of Kerala and South India in one unforgettable journey. Explore the historic attractions of Cochin, enjoy the misty tea gardens and scenic viewpoints of Munnar, experience the wildlife and spice plantations of Thekkady, relax in the beautiful hill station of Vagamon, cruise through the tranquil backwaters of Alleppey aboard a traditional houseboat, visit the iconic Vivekananda Memorial and sunrise point at Kanyakumari, and unwind on the golden beaches of Kovalam.',
@@ -292,19 +292,20 @@ export default function Packages({ onNavigate, prefillParams }: PackagesProps) {
                   </span>
                 </div>
                 
-              {pkg.routes?.map((route, index) => (
-  <p
-    key={index}
-    className="text-xs font-bold text-primary flex items-start gap-1.5 leading-relaxed"
-  >
-    <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-    <span>
-      <strong className="text-text-muted">
-        Route CT{String(index + 1).padStart(2, '0')}:
-      </strong>{' '}
-      {route}
-    </span>
-  </p>
+              {'routes' in pkg &&
+  pkg.routes.map((route: string, index: number) => (
+    <p
+      key={index}
+      className="text-xs font-bold text-primary flex items-start gap-1.5 leading-relaxed"
+    >
+      <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+      <span>
+        <strong className="text-text-muted">
+          Route CT{String(index + 1).padStart(2, '0')}:
+        </strong>{' '}
+        {route}
+      </span>
+    </p>
 ))}
                 
                 <p className="text-text-muted text-sm leading-relaxed">
