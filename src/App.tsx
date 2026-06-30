@@ -235,11 +235,8 @@ function Footer({ onNavigate }: FooterProps) {
                 </a>
               </div>
               <div className="space-y-1">
-                <a href="mailto:sales@keralahouseboatsinfo.com" className="flex items-center gap-2 hover:text-white break-all">
-                  <Mail size={16} className="shrink-0 text-accent" />
-                  sales@keralahouseboatsinfo.com
-                </a>
-                <a href="mailto:houseboatkera@gmail.com" className="flex items-center gap-2 pl-6 hover:text-white break-all">
+                <a href="mailto:houseboatkera@gmail.com" className="flex items-center gap-2  hover:text-white break-all">
+                   <Mail size={16} className="shrink-0 text-accent" />
                   houseboatkera@gmail.com
                 </a>
               </div>

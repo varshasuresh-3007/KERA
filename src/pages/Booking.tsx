@@ -373,8 +373,8 @@ export default function Booking({ prefillParams }: BookingProps) {
                   <a href="tel:+918086907043" className="flex items-center gap-1.5 hover:text-primary">
                     <Phone className="w-3.5 h-3.5 text-accent" /> +91 80869 07043
                   </a>
-                  <a href="mailto:sales@keralahouseboatsinfo.com" className="flex items-center gap-1.5 hover:text-primary">
-                    <Mail className="w-3.5 h-3.5 text-accent" /> sales@keralahouseboatsinfo.com
+                  <a href="mailto:houseboatkera@gmail.com" className="flex items-center gap-1.5 hover:text-primary">
+                    <Mail className="w-3.5 h-3.5 text-accent" /> houseboatkera@gmail.com
                   </a>
                 </div>
               </div>
